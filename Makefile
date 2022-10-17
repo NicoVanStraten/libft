@@ -6,30 +6,31 @@
 #    By: nvan-str <nvan-str@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/04 16:11:58 by nvan-str      #+#    #+#                  #
-#    Updated: 2022/10/14 14:53:16 by nvan-str      ########   odam.nl          #
+#    Updated: 2022/10/17 11:37:54 by nvan-str      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-SRC =	ft_isalnum.o\
-		ft_isalpha.o\
-		ft_isdigit.o\
-		ft_isprint.o\
-		# ft_isascii.o\
-		# ft_bzero.o\
-		# ft_memset.o\
-		# ft_strchr.o\
-		# ft_strlen.o\
-		# ft_strncmp.o\
-		# ft_tolower.o\
-		# ft_toupper.o\
-		# ft_memchr.o\
-		# ft_memcmp.o\
-		# ft_memcpy.o\
-		# ft_memmove.o\
-		# ft_strnstr.o\
-		# ft_strlcpy.o\
+SRC =	ft_isalnum.c\
+		ft_isalpha.c\
+		ft_isdigit.c\
+		ft_isprint.c\
+		ft_isascii.c\
+		ft_bzero.c\
+		ft_memset.c\
+		# ft_strchr.c\
+		# ft_strlen.c\
+		ft_strncmp.c\
+		ft_tolower.c\
+		# ft_toupper.c\
+		# ft_memchr.c\
+		# ft_memcmp.c\
+		# ft_memcpy.c\
+		# ft_memmove.c\
+		# ft_strnstr.c\
+		# ft_strlcpy.c\
 
+OBJ = $(SRC:.c=.o)
 FLAGS = -Wall -Wextra -Werror
 RM = /bin/rm -f
 
@@ -39,11 +40,11 @@ RM = /bin/rm -f
 
 all : $(NAME)
 
-$(NAME): $(SRC)
+$(NAME): $(OBJ)
 	@ar -cr $@ $^
 
 clean:
-	@$(RM) $(SRC)
+	@$(RM) $(OBJ)
 
 fclean: clean
 	@$(RM) $(NAME)

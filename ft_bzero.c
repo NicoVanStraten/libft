@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isprint.c                                       :+:    :+:            */
+/*   ft_bzero.c                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/14 15:03:48 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/10/14 15:06:51 by nvan-str      ########   odam.nl         */
+/*   Created: 2022/10/17 11:38:08 by nvan-str      #+#    #+#                 */
+/*   Updated: 2022/10/17 11:40:07 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+void *ft_bzero(void *s, size_t n)
 {
-	if(c >= 32 && c <= 126)
-		return (1);
-	return (0);
+	return(ft_memset(s, 0, n));
 }
