@@ -6,7 +6,7 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 15:31:58 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/10/14 11:29:38 by nvan-str      ########   odam.nl         */
+/*   Updated: 2022/10/17 12:20:54 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ int	ft_isdigit(int c);
 int	ft_isprint(int c);
 
 //to type
-int	ft_tolower(char c);
-int	ft_toupper(char c);
+int	ft_tolower(int c);
+int	ft_toupper(int c);
 
 // memory type
 void *ft_memset(void *dest, int c, size_t n);
@@ -37,7 +37,7 @@ void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 void *ft_memmove(void *dst, const void *src, size_t len);
 
 // string type
-char *ft_strchr(char *str, int c);
+char *ft_strchr(const char *str, int c);
 size_t ft_strlen(const char *str);
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
 char *ft_strnstr(const char *haystack, const char *needle, size_t len);
