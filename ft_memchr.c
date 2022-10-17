@@ -1,42 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memcpy.c                                        :+:    :+:            */
+/*   ft_memchr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/17 15:02:45 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/10/17 15:16:01 by nvan-str      ########   odam.nl         */
+/*   Created: 2022/10/17 14:46:38 by nvan-str      #+#    #+#                 */
+/*   Updated: 2022/10/17 14:50:56 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void *ft_memchr(const void *s, int c, size_t n)
 {
 	size_t i;
-	unsigned char *source;
-	unsigned char *destination;
+	char *string;
 
 	i = 0;
-	source = (unsigned char *) src;
-	destination = (unsigned char *) dst;
-	if(destination == source && n == 0)
-	{
-		return (dst);
-	}
-	if (source == 0 && destination == 0)
-	{
-		return (0);
-	}
-	if (n < 0)
-	{
-		return (0);
-	}
+	string = (char *) s;
 	while (i < n)
 	{
-		destination[i] = source[i];
+		if (string[i] == (char)c)
+		{
+			return (&string[i]);
+		}
 		i++;
 	}
-	return (dst);
+	return (NULL);
 }

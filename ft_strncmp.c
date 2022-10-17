@@ -6,7 +6,7 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 12:34:18 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/10/17 13:05:55 by nvan-str      ########   odam.nl         */
+/*   Updated: 2022/10/17 15:27:16 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,21 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int i;
+	size_t i;
+	unsigned char *string1;
+	unsigned char *string2;
 
 	i = 0;
-	while (n > 0)
+	string1 = (unsigned char *) s1;
+	string2 = (unsigned char *) s2;
+	while (n != 0)
 	{
-		if (s1[i] == s2[i])
+		if (string1[i] != string2[i]|| (string1[1] == 0 || string2[i] == 0))
 		{
-			i++;
-			n--;
+			return(string1[i] - string2[i]);
 		}
-		return(s1[i] - s2[i]);
+		i++;
+		n--;
 	}
+	return (0);
 }
-
- 

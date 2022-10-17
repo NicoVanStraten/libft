@@ -6,7 +6,7 @@
 #    By: nvan-str <nvan-str@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/04 16:11:58 by nvan-str      #+#    #+#                  #
-#    Updated: 2022/10/17 13:05:18 by nvan-str      ########   odam.nl          #
+#    Updated: 2022/10/17 16:20:39 by nvan-str      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,10 +23,10 @@ SRC =	ft_isalnum.c\
 		ft_strchr.c\
 		ft_strlen.c\
 		ft_strncmp.c\
-		# ft_memchr.c\
-		# ft_memcmp.c\
-		# ft_memcpy.c\
-		# ft_memmove.c\
+		ft_memchr.c\
+		ft_memcmp.c\
+		ft_memcpy.c\
+		ft_memmove.c\
 		# ft_strnstr.c\
 		# ft_strlcpy.c\
 
