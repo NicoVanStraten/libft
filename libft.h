@@ -6,7 +6,7 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 15:31:58 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/10/18 13:46:27 by nvan-str      ########   odam.nl         */
+/*   Updated: 2022/10/18 19:00:33 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,13 @@ size_t ft_strlen(const char *str);
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
 char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 char *ft_strrchr(const char *s, int c);
+char *ft_strdup(const char *s1);
 
 //conversion
 size_t ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
+int ft_atoi(const char *str);
 
 // malloc
-
 void * ft_calloc(size_t count, size_t size);
 
 

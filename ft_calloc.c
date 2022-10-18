@@ -6,7 +6,7 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/18 12:32:09 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/10/18 12:48:59 by nvan-str      ########   odam.nl         */
+/*   Updated: 2022/10/18 15:54:18 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@ void * ft_calloc(size_t count, size_t size)
 	void *ptr;
 	
 	ptr = malloc(count * size);
+	if (count == SIZE_MAX && size == SIZE_MAX)
+	{
+		return (NULL);
+	}
 	if (ptr == NULL)
 	{
 		return (ptr);
