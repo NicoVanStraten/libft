@@ -6,7 +6,7 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/18 15:13:39 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/10/18 17:26:01 by nvan-str      ########   odam.nl         */
+/*   Updated: 2022/10/19 11:51:43 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,32 @@
 int ft_atoi(const char *str)
 {
 	int i;
+	int j;
+	int r;
 
 	i = 0;
-	if (str[i] = '\t'|| '\n'|| '\v'| '\r'|| '\f'|| ' ')
+	j = 1;
+	r = 0;
+	while((str[i] >= 9 && str[i] <= 13 )|| str[i] ==  ' ')
+	{
+		i++;
+	}
+	if (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
+		{
+			j = -1;
+		}
+		i++;
+	}
+	while (ft_isdigit(str[i]))
+	{
+		r = r * 10 + (str[i] -48);
+		i++;
+	}
+	if (j < 0)
+	{
+		return (r * j);
+	}
+	return (r);
 }
