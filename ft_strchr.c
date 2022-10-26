@@ -6,7 +6,7 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 11:41:27 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/10/17 12:23:44 by nvan-str      ########   odam.nl         */
+/*   Updated: 2022/10/24 14:38:54 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,17 @@ char *ft_strchr(const char *str, int c)
 	int i;
 	char *string;
 
+
 	i = 0;
 	string = (char *) str;
+	if ((char)c == '\0')
+	{
+		while (*str)
+		{
+			str++;
+		}
+		return ((char *)str);
+	}
 	while (str[i] != '\0')
 	{
 		if (str[i] == (char)c)
@@ -27,9 +36,6 @@ char *ft_strchr(const char *str, int c)
 		}
 		i++;
 	}
-	if (c == 0)
-	{
-		return (&string[i]);
-	}
 	return (NULL);
 }
+

@@ -6,7 +6,7 @@
 #    By: nvan-str <nvan-str@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/04 16:11:58 by nvan-str      #+#    #+#                  #
-#    Updated: 2022/10/19 11:47:46 by nvan-str      ########   odam.nl          #
+#    Updated: 2022/10/19 16:31:21 by nvan-str      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,11 @@ SRC =	ft_isalnum.c\
 		ft_strrchr.c\
 		ft_strdup.c\
 		ft_atoi.c\
-
+		ft_putchar_fd.c\
+		ft_putstr_fd.c\
+		ft_putendl_fd.c\
+		ft_putnbr_fd.c\
+		ft_striteri.c\
 
 OBJ = $(SRC:.c=.o)
 FLAGS = -Wall -Wextra -Werror

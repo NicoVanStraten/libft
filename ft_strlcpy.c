@@ -6,7 +6,7 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/18 10:51:39 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/10/18 13:54:28 by nvan-str      ########   odam.nl         */
+/*   Updated: 2022/10/24 14:15:21 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	
 	i = 0;
 	srclen = ft_strlen(src);
-	while (i < dstsize && i < ft_strlen(dst))
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	if (dstsize > 0)
-	{
-		dst[i - 1] = '\0';
+	if (dstsize != 0)
+		{
+		while (i < dstsize - 1 && src[i] != '\0')
+		{
+			dst[i] = src[i];
+			i++;
+		}
+	dst[i] = '\0';
 	}
 	return (srclen);
 }

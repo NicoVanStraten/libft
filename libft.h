@@ -6,7 +6,7 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 15:31:58 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/10/18 19:00:33 by nvan-str      ########   odam.nl         */
+/*   Updated: 2022/10/19 16:31:05 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void *ft_memset(void *dest, int c, size_t n);
 void *ft_bzero(void *s, size_t n);
 void *ft_memchr(const void *s, int c, size_t n);
 int	ft_memcmp(const void *s1, const void *s2, size_t n);
-void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
+void *ft_memcpy(void *dst, const void *src, size_t n);
 void *ft_memmove(void *dst, const void *src, size_t len);
 
 // string type
@@ -46,11 +46,18 @@ char *ft_strrchr(const char *s, int c);
 char *ft_strdup(const char *s1);
 
 //conversion
-size_t ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
+size_t ft_strlcpy(char *dst, const char *src, size_t dstsize);
 int ft_atoi(const char *str);
 
 // malloc
 void * ft_calloc(size_t count, size_t size);
+
+// additional
+void ft_putchar_fd(char c, int fd);
+void ft_putstr_fd(char *s, int fd);
+void ft_putendl_fd(char *s, int fd);
+void ft_putnbr_fd(int n, int fd);
+void ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 
 # endif 

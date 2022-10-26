@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strncmp.c                                       :+:    :+:            */
+/*   ft_putnbr_fd.c                                     :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/17 12:34:18 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/10/24 14:41:33 by nvan-str      ########   odam.nl         */
+/*   Created: 2022/10/19 12:16:59 by nvan-str      #+#    #+#                 */
+/*   Updated: 2022/10/19 14:37:14 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void ft_putnbr_fd(int n, int fd)
 {
-	size_t i;
-	unsigned char *string1;
-	unsigned char *string2;
+	int i;
 
-	i = 0;
-	string1 = (unsigned char *) s1;
-	string2 = (unsigned char *) s2;
-	while (n != 0)
+	if (n == -2147483648)
 	{
-		if (string1[i] != string2[i]|| (string1[i] == 0 || string2[i] == 0))
-		{
-			return(string1[i] - string2[i]);
-		}
-		i++;
-		n--;
+		ft_putstr_fd("-2147483648", fd);
+		return;
 	}
-	return (0);
+	if (n < 0)
+	{
+		write (fd, "-", 1);
+		n = -n;
+	}
+	if (n >= 10)
+	{
+		ft_putnbr_fd(n/10, fd);
+	}
+	i = n % 10 + 48;
+	write (fd, &i, 1);
 }
