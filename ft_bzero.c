@@ -6,13 +6,13 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 11:38:08 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/10/17 11:40:07 by nvan-str      ########   odam.nl         */
+/*   Updated: 2022/10/26 14:06:02 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_bzero(void *s, size_t n)
+void	*ft_bzero(void *s, size_t n)
 {
-	return(ft_memset(s, 0, n));
+	return (ft_memset(s, 0, n));
 }

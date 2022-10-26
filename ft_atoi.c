@@ -6,25 +6,23 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/18 15:13:39 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/10/19 11:51:43 by nvan-str      ########   odam.nl         */
+/*   Updated: 2022/10/26 14:04:45 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	int i;
-	int j;
-	int r;
+	int	i;
+	int	j;
+	int	r;
 
 	i = 0;
 	j = 1;
 	r = 0;
-	while((str[i] >= 9 && str[i] <= 13 )|| str[i] ==  ' ')
-	{
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
 		i++;
-	}
 	if (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')
@@ -39,8 +37,6 @@ int ft_atoi(const char *str)
 		i++;
 	}
 	if (j < 0)
-	{
 		return (r * j);
-	}
 	return (r);
 }

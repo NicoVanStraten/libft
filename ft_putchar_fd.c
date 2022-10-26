@@ -6,13 +6,13 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/19 11:57:34 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/10/19 12:03:22 by nvan-str      ########   odam.nl         */
+/*   Updated: 2022/10/26 14:10:28 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }

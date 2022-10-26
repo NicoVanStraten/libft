@@ -6,17 +6,16 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 11:41:27 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/10/24 14:38:54 by nvan-str      ########   odam.nl         */
+/*   Updated: 2022/10/26 14:14:30 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *str, int c)
 {
-	int i;
-	char *string;
-
+	int		i;
+	char	*string;
 
 	i = 0;
 	string = (char *) str;
@@ -38,4 +37,3 @@ char *ft_strchr(const char *str, int c)
 	}
 	return (NULL);
 }
-

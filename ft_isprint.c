@@ -6,7 +6,7 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/14 15:03:48 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/10/14 15:06:51 by nvan-str      ########   odam.nl         */
+/*   Updated: 2022/10/26 14:07:02 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isprint(int c)
 {
-	if(c >= 32 && c <= 126)
+	if (c >= 32 && c <= 126)
 		return (1);
 	return (0);
 }

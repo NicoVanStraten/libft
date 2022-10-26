@@ -6,7 +6,7 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/14 14:41:41 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/10/14 14:49:39 by nvan-str      ########   odam.nl         */
+/*   Updated: 2022/10/26 14:06:53 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isdigit(int c)
 {
-	if(c >= '0' && c <= '9')
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }

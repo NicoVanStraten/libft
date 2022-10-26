@@ -1,33 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memcmp.c                                        :+:    :+:            */
+/*   ft_strlcat.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/17 14:51:28 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/10/26 14:08:44 by nvan-str      ########   odam.nl         */
+/*   Created: 2022/10/26 12:46:51 by nvan-str      #+#    #+#                 */
+/*   Updated: 2022/10/26 14:20:03 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t			i;
-	unsigned char	*string1;
-	unsigned char	*string2;
+	size_t	i;
+	size_t	j;
+	size_t	x;
 
 	i = 0;
-	string1 = (unsigned char *) s1;
-	string2 = (unsigned char *) s2;
-	while (i < n)
+	j = 0;
+	if (dst)
+		i = ft_strlen(dst);
+	x = i;
+	if (dstsize <= i)
+		return (ft_strlen(src) + dstsize);
+	if (dstsize > i)
 	{
-		if (string1[i] != string2[i])
+		dstsize -= i;
+		while (j < dstsize - 1 && src[j] != '\0')
 		{
-			return (string1[i] - string2[i]);
+			dst[i] = src[j];
+			i++;
+			j++;
 		}
-		i++;
+		dst[i] = '\0';
 	}
-	return (0);
+	if (dstsize > j)
+		return (ft_strlen(src) + x);
+	return (ft_strlen (src) + ft_strlen(dst));
 }

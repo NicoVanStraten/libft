@@ -6,20 +6,20 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/19 16:26:46 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/10/19 16:31:50 by nvan-str      ########   odam.nl         */
+/*   Updated: 2022/10/26 14:15:46 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (s == NULL)
 	{
-		return;
+		return ;
 	}
 	while (s[i] != '\0')
 	{

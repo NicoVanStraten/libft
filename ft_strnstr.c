@@ -6,17 +6,17 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 16:43:05 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/10/18 11:24:09 by nvan-str      ########   odam.nl         */
+/*   Updated: 2022/10/26 14:26:00 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t s;
-	size_t n;
-	char *modhay;
+	size_t	s;
+	size_t	n;
+	char	*modhay;
 
 	s = 0;
 	n = 0;
