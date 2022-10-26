@@ -6,7 +6,7 @@
 #    By: nvan-str <nvan-str@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/04 16:11:58 by nvan-str      #+#    #+#                  #
-#    Updated: 2022/10/26 13:03:42 by nvan-str      ########   odam.nl          #
+#    Updated: 2022/10/26 14:55:12 by nvan-str      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ SRC =	ft_isalnum.c\
 		ft_striteri.c\
 		ft_strmapi.c\
 		ft_strlcat.c\
+		ft_substr.c\
 
 OBJ = $(SRC:.c=.o)
 FLAGS = -Wall -Wextra -Werror
