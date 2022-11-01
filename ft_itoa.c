@@ -6,34 +6,55 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/26 17:32:52 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/10/28 18:38:18 by nvan-str      ########   odam.nl         */
+/*   Updated: 2022/10/31 16:05:30 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
 
-int ft_numlen(int n)
+uint32_t	ft_numlen(long n)
 {
-	while (ft_isdigit(str[i]))
+	int	len;
+
+	len = 1;
+	if (n < 0)
 	{
-		r = r * 10 + (str[i] -48);
-		i++;
+		n *= -1;
+		len++;
 	}
+	while (n >= 10)
+	{
+		n = n / 10;
+		len++;
+	}
+	return (len);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int		nb;
+	int			len;
+	char		*str;
+	int			neg;
 
-	nb = n;
-	str = ft_calloc(())
+	len = ft_numlen(n);
+	neg = 0;
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	str = (char *)malloc(len +1);
 	if (str == NULL)
 		return (NULL);
-	if (nb < 0)
+	if (n < 0)
 	{
 		str[0] = '-';
-		nb = -nb;
+		n *= -1;
+		neg = 1;
 	}
-	while()
+str[len] = '\0';
+	while (len-- > neg)
+	{
+		str[len] = n % 10 + '0';
+		n = n / 10;
+	}
+	return (&str[0]);
 }

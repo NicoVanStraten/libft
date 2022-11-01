@@ -6,7 +6,7 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/26 12:46:51 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/10/26 14:20:03 by nvan-str      ########   odam.nl         */
+/*   Updated: 2022/11/01 11:40:03 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		return (ft_strlen(src) + x);
 	return (ft_strlen (src) + ft_strlen(dst));
 }
+
+// int main(void)
+// {
+// 	char *dst;
+// 	char *src;
+// 	size_t dstsize;
+
+// 	src = "allo"
+// 	dstsize = 
+// 	printf("test: %i,", ft_strlcat(dst, src, dstsize))
+// }
