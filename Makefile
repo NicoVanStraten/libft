@@ -6,7 +6,7 @@
 #    By: nvan-str <nvan-str@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/04 16:11:58 by nvan-str      #+#    #+#                  #
-#    Updated: 2022/11/03 13:26:50 by nvan-str      ########   odam.nl          #
+#    Updated: 2022/11/03 14:10:53 by nvan-str      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,8 @@ BONUS_SRC = ft_lstnew_bonus.c\
 			ft_lstsize_bonus.c\
 			ft_lstlast_bonus.c\
 			ft_lstadd_back_bonus.c\
+			ft_lstdelone_bonus.c\
+			ft_lstclear_bonus.c\
 
 OBJ = $(SRC:.c=.o)
 BONUS_OBJ = $(BONUS_SRC:.c=.o)
